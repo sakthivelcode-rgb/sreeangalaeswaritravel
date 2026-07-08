@@ -1,34 +1,126 @@
-function sendBooking() {
+// ===========================
+// WHATSAPP BOOKING
+// ===========================
 
-    const name = document.getElementById("customerName").value;
-    const phone = document.getElementById("customerPhone").value;
-    const from = document.getElementById("fromLocation").value;
-    const to = document.getElementById("toLocation").value;
-    const vehicle = document.getElementById("vehicle").value;
+function sendBooking(){
 
-    const message =
-`*New Booking Enquiry*
+    let name = document.getElementById("customerName").value;
+    let phone = document.getElementById("customerPhone").value;
+    let from = document.getElementById("fromLocation").value;
+    let to = document.getElementById("toLocation").value;
+    let vehicle = document.getElementById("vehicle").value;
 
-Name: ${name}
-Phone: ${phone}
-From: ${from}
-To: ${to}
-Vehicle: ${vehicle}`;
 
-    window.open(
-        `https://wa.me/919092577913?text=${encodeURIComponent(message)}`,
-        "_blank"
-    );
+    if(name === "" || phone === "" || from === "" || to === "" || vehicle === ""){
+        alert("Please fill all booking details");
+        return;
+    }
+
+
+    let message = 
+`*Sree Angalaeswari Travels - Booking Enquiry*
+
+Customer Name: ${name}
+
+Phone Number: ${phone}
+
+Starting Location: ${from}
+
+Destination: ${to}
+
+Vehicle Required: ${vehicle}
+
+Thank You.`;
+
+
+    let whatsappURL =
+    "https://wa.me/919092577913?text=" 
+    + encodeURIComponent(message);
+
+
+    window.open(whatsappURL,"_blank");
+
 }
 
-// Mobile Menu
+
+
+
+// ===========================
+// MOBILE MENU
+// ===========================
+
+
 const menuBtn = document.getElementById("menuBtn");
+
 const menu = document.getElementById("menu");
 
-menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("active");
+
+if(menuBtn){
+
+    menuBtn.addEventListener("click", function(){
+
+        menu.classList.toggle("active");
+
+    });
+
+}
+
+
+
+// Close menu after clicking link
+
+const menuLinks = document.querySelectorAll("#menu a");
+
+
+menuLinks.forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        menu.classList.remove("active");
+
+    });
+
 });
 
-// Footer Copyright
+
+
+
+// ===========================
+// FOOTER YEAR
+// ===========================
+
+
+let year = new Date().getFullYear();
+
+
 document.getElementById("copyright").innerHTML =
-`© ${new Date().getFullYear()} Sree Angalaeswari Travels. All Rights Reserved.`;
+"© " + year + " Sree Angalaeswari Travels. All Rights Reserved.";
+
+
+
+
+
+// ===========================
+// SMOOTH SCROLL
+// ===========================
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function(e){
+
+        let target = document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+                behavior:"smooth"
+            });
+
+        }
+
+    });
+
+});
