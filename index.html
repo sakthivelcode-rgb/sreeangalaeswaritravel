@@ -13,6 +13,8 @@
 
 <meta name="keywords" content="Luxury Bus Rental Tamil Nadu, Tourist Bus Booking, Tempo Traveller Tamil Nadu, Travel Agency">
 
+<meta name="author" content="Sree Angalaeswari Travels">
+
 <link rel="icon" href="icon.png">
 
 <link rel="stylesheet" href="style.css">
@@ -22,12 +24,6 @@
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  
-  <!-- Other meta tags -->
-
-  <!-- Vercel Analytics -->
-  <script defer src="/_vercel/insights/script.js"></script>
-  
 
 
 </head>
@@ -56,16 +52,21 @@ Sree Angalaeswari Travels
 <ul id="menu">
 
 <li><a href="#home">Home</a></li>
+
 <li><a href="#about">About</a></li>
+
 <li><a href="#services">Services</a></li>
+
 <li><a href="#fleet">Fleet</a></li>
+
 <li><a href="#gallery">Gallery</a></li>
+
 <li><a href="#contact">Contact</a></li>
 
 </ul>
 
 
-<button id="menuBtn">
+<button id="menuBtn" aria-label="Menu">
 
 <i class="fa-solid fa-bars"></i>
 
@@ -78,8 +79,7 @@ Sree Angalaeswari Travels
 
 
 
-
-<!-- HERO -->
+<!-- HERO SECTION -->
 
 
 <section class="hero" id="home">
@@ -88,9 +88,9 @@ Sree Angalaeswari Travels
 <div class="hero-content">
 
 
-<p class="tag">
+<span class="tag">
 Premium Travel Experience
-</p>
+</span>
 
 
 <h1>
@@ -117,6 +117,7 @@ Book Your Trip
 <a href="tel:+919092577913" class="secondary-btn">
 
 <i class="fa-solid fa-phone"></i>
+
 Call Now
 
 </a>
@@ -134,11 +135,10 @@ Call Now
 
 
 
+<!-- ABOUT SECTION -->
 
-<!-- ABOUT -->
 
-
-<section id="about" class="about">
+<section class="about" id="about">
 
 
 <div class="title">
@@ -174,30 +174,74 @@ We provide premium travel solutions for family trips, pilgrimage tours, college 
 Our well-maintained vehicles and experienced drivers ensure a safe and comfortable travel experience.
 </p>
 
+
 </div>
 
 
 
 <div class="about-box">
 
+
 <div>
+
 <i class="fa-solid fa-road"></i>
-<h4>15+ Years</h4>
-<p>Experience</p>
+
+<h4>
+15+
+</h4>
+
+<p>
+Years Experience
+</p>
+
 </div>
 
 
+
 <div>
+
 <i class="fa-solid fa-users"></i>
-<h4>5000+</h4>
-<p>Happy Customers</p>
+
+<h4>
+5000+
+</h4>
+
+<p>
+Happy Customers
+</p>
+
 </div>
 
 
+
 <div>
+
 <i class="fa-solid fa-bus"></i>
-<h4>150+</h4>
-<p>Trips</p>
+
+<h4>
+150+
+</h4>
+
+<p>
+Trips Completed
+</p>
+
+</div>
+
+
+
+<div>
+
+<i class="fa-solid fa-star"></i>
+
+<h4>
+5 Star
+</h4>
+
+<p>
+Service Quality
+</p>
+
 </div>
 
 
@@ -214,8 +258,7 @@ Our well-maintained vehicles and experienced drivers ensure a safe and comfortab
 
 
 
-
-<!-- SERVICES -->
+<!-- SERVICES SECTION -->
 
 
 <section class="services" id="services">
@@ -266,7 +309,6 @@ Safe pilgrimage trips across South India.
 
 
 
-
 <div class="card">
 
 <i class="fa-solid fa-graduation-cap"></i>
@@ -303,40 +345,106 @@ Professional employee transportation.
 
 
 </section>
+<!-- BOOKING SECTION -->
+
+<section class="booking" id="booking">
 
 
+<div class="title">
 
-<!--BOOKING--->
+<h2>
+Plan Your Journey
+</h2>
+
+<p>
+Get a quick quotation through WhatsApp
+</p>
+
+</div>
 
 
 
 <div class="booking-form">
 
-    <input type="text" id="customerName" placeholder="Your Name">
 
-    <input type="tel" id="customerPhone" placeholder="Phone Number">
+<input 
+type="text" 
+id="customerName" 
+placeholder="Your Name">
 
-    <input type="text" id="fromLocation" placeholder="Starting Location">
 
-    <input type="text" id="toLocation" placeholder="Destination">
 
-    <select id="vehicle">
-        <option>Select Vehicle</option>
-        <option>Tempo Traveller</option>
-        <option>Mini Bus</option>
-        <option>Luxury Bus</option>
-    </select>
+<input 
+type="tel" 
+id="customerPhone" 
+placeholder="Phone Number">
 
-    <button onclick="sendBooking()">
-        <i class="fa-brands fa-whatsapp"></i>
-        Send Enquiry
-    </button>
+
+
+<input 
+type="text" 
+id="fromLocation" 
+placeholder="Starting Location">
+
+
+
+<input 
+type="text" 
+id="toLocation" 
+placeholder="Destination">
+
+
+
+<select id="vehicle">
+
+<option value="">
+Select Vehicle
+</option>
+
+<option>
+4 Seater Car
+</option>
+
+<option>
+7 Seater Car
+</option>
+
+<option>
+14 Seater Mini Bus
+</option>
+
+<option>
+21 Seater Bus
+</option>
+
+<option>
+54 Seater Luxury Bus
+</option>
+
+</select>
+
+
+
+<button onclick="sendBooking()">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Send Enquiry
+
+</button>
+
 
 </div>
 
 
-<!-- CONTINUED IN PART 2 -->
-  <!-- FLEET SECTION -->
+</section>
+
+
+
+
+
+<!-- FLEET SECTION -->
+
 
 <section class="fleet" id="fleet">
 
@@ -355,7 +463,9 @@ Choose the perfect vehicle for your journey
 
 
 
+
 <div class="fleet-grid">
+
 
 
 <div class="fleet-card">
@@ -374,9 +484,10 @@ Premium Family Vehicle
 
 
 
+
 <div class="fleet-card">
 
-<img src="car2.jpeg" alt="7 Seater Vehicle">
+<img src="car2.jpeg" alt="7 Seater Car">
 
 <h3>
 7 Seater
@@ -451,8 +562,6 @@ Luxury Coach Bus
 
 
 
-
-
 <!-- WHY CHOOSE US -->
 
 
@@ -471,6 +580,7 @@ Why Choose Us?
 
 
 <div class="why-grid">
+
 
 
 <div>
@@ -532,8 +642,6 @@ Always ready for your travel needs.
 
 
 
-
-
 <!-- GALLERY -->
 
 
@@ -571,16 +679,7 @@ Our Gallery
 
 </section>
 
-
-
-
-
-
-
-
-
-<!-- CUSTOMER REVIEWS -->
-
+  <!-- CUSTOMER REVIEWS -->
 
 <section class="reviews">
 
@@ -592,7 +691,6 @@ Customer Reviews
 </h2>
 
 </div>
-
 
 
 
@@ -608,8 +706,12 @@ Excellent service. Clean bus and professional driver.
 </p>
 
 <h4>
-- Happy Customer
+- Ravi Kumar
 </h4>
+
+<p>
+Chennai
+</p>
 
 </div>
 
@@ -621,12 +723,16 @@ Excellent service. Clean bus and professional driver.
 <i class="fa-solid fa-quote-left"></i>
 
 <p>
-Very comfortable journey for our family tour.
+Very comfortable journey for our family temple tour.
 </p>
 
 <h4>
-- Family Traveller
+- Priya Family
 </h4>
+
+<p>
+Tamil Nadu
+</p>
 
 </div>
 
@@ -638,12 +744,16 @@ Very comfortable journey for our family tour.
 <i class="fa-solid fa-quote-left"></i>
 
 <p>
-Best travel support for college trips.
+Best travel support for our college trip.
 </p>
 
 <h4>
-- College Group
+- Arun College Group
 </h4>
+
+<p>
+Madurai
+</p>
 
 </div>
 
@@ -659,10 +769,7 @@ Best travel support for college trips.
 
 
 
-
-
-
-<!-- CONTACT -->
+<!-- CONTACT SECTION -->
 
 
 <section class="contact" id="contact">
@@ -684,7 +791,9 @@ Contact Us
 
 <div class="contact-card">
 
+
 <i class="fa-solid fa-phone"></i>
+
 
 <h3>
 Call Us
@@ -704,24 +813,25 @@ Call Us
 
 
 
-
 <div class="contact-card">
 
+
 <i class="fa-solid fa-envelope"></i>
+
 
 <h3>
 Email
 </h3>
 
 
-<p>
+<a href="mailto:sreeangalaeswaritravels@gmail.com">
+
 sreeangalaeswaritravels@gmail.com
-</p>
+
+</a>
 
 
 </div>
-
-
 
 
 
@@ -738,7 +848,7 @@ WhatsApp Booking
 </h3>
 
 
-<a href="https://wa.me/919092577913">
+<a href="https://wa.me/919092577913?text=Hello%20I%20want%20to%20book%20a%20vehicle">
 
 Chat Now
 
@@ -760,8 +870,6 @@ Chat Now
 
 
 
-
-
 <!-- FOOTER -->
 
 
@@ -770,11 +878,15 @@ Chat Now
 
 <div class="footer-logo">
 
+
 <i class="fa-solid fa-bus"></i>
+
 
 Sree Angalaeswari Travels
 
+
 </div>
+
 
 
 
@@ -788,11 +900,13 @@ Sree Angalaeswari Travels
 </a>
 
 
+
 <a href="#">
 
 <i class="fab fa-instagram"></i>
 
 </a>
+
 
 
 <a href="https://wa.me/919092577913">
@@ -802,11 +916,13 @@ Sree Angalaeswari Travels
 </a>
 
 
+
 <a href="#">
 
 <i class="fab fa-youtube"></i>
 
 </a>
+
 
 
 </div>
@@ -834,14 +950,18 @@ Safe Journey • Happy Journey
 
 
 
+
 <!-- FLOATING WHATSAPP -->
 
 
-<a class="whatsapp-float" href="https://wa.me/919092577913">
+<a 
+class="whatsapp-float" 
+href="https://wa.me/919092577913?text=Hello%20I%20want%20to%20book%20a%20vehicle">
 
 <i class="fa-brands fa-whatsapp"></i>
 
 </a>
+
 
 
 
