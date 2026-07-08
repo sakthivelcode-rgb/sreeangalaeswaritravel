@@ -215,3 +215,34 @@ copyright.innerHTML =
 
 
 }
+
+
+function sendBooking() {
+
+let from = document.getElementById("fromLocation").value;
+let to = document.getElementById("toLocation").value;
+let date = document.getElementById("travelDate").value;
+let time = document.getElementById("travelTime").value;
+let days = document.getElementById("days").value;
+let vehicle = document.getElementById("vehicle").value;
+
+if(from === "" || to === "" || date === "" || time === "" || days === "") {
+    alert("Please fill all details");
+    return;
+}
+
+let message = `*New Trip Enquiry* 🚍
+
+From: ${from}
+To: ${to}
+Date: ${date}
+Time: ${time}
+Days: ${days}
+Vehicle: ${vehicle}`;
+
+let phone = "919092577913";
+
+let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+window.open(url, "_blank");
+  }
