@@ -1,17 +1,3 @@
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.input-group label {
-  font-size: 14px;
-  font-weight: 500;
-}
-
-
-
-
 *{
 margin:0;
 padding:0;
@@ -19,22 +5,90 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-
-html{
-scroll-behavior:smooth;
-}
-
-
 body{
 background:#f8fafc;
-color:#1f2937;
 }
 
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:#031220;
+color:white;
+}
 
-/* HEADER */
+.primary-btn{
+margin-top:20px;
+padding:12px 30px;
+background:#f59e0b;
+color:white;
+text-decoration:none;
+border-radius:30px;
+}
 
-header{
+/* BOOKING */
+.booking{
+padding:80px 20px;
+background:#f1f5f9;
+}
 
+.title{
+text-align:center;
+margin-bottom:30px;
+}
+
+.booking-form{
+max-width:500px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px #0002;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+/* INPUT GROUP */
+.input-group{
+display:flex;
+flex-direction:column;
+gap:5px;
+}
+
+.input-group label{
+font-size:14px;
+font-weight:500;
+}
+
+.booking-form input{
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:14px;
+}
+
+/* BUTTON */
+.booking-form button{
+padding:14px;
+border:none;
+border-radius:30px;
+background:#25D366;
+color:white;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.booking-form{
+width:100%;
+}
+}
 position:fixed;
 top:0;
 width:100%;
