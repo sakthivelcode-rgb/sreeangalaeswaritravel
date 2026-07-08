@@ -5,7 +5,7 @@ const menuBtn = document.getElementById("menuBtn");
 const menu = document.getElementById("menu");
 
 
-if(menuBtn){
+if(menuBtn && menu){
 
 menuBtn.addEventListener("click",()=>{
 
@@ -14,8 +14,6 @@ menu.classList.toggle("show");
 });
 
 }
-
-
 
 
 
@@ -31,6 +29,27 @@ menu.classList.remove("show");
 });
 
 });
+
+
+
+
+// CLOSE MENU WHEN CLICK OUTSIDE
+
+
+document.addEventListener("click",(e)=>{
+
+if(
+menu &&
+!menu.contains(e.target) &&
+!menuBtn.contains(e.target)
+){
+
+menu.classList.remove("show");
+
+}
+
+});
+
 
 
 
@@ -53,15 +72,19 @@ document.getElementById("toLocation").value;
 
 
 
+let vehicle =
+document.getElementById("vehicle").value;
 
-if(from=="" || to==""){
 
 
-alert("Please enter From and To location");
+
+if(from==="" || to===""){
+
+
+alert("Please enter starting location and destination");
 
 
 return;
-
 
 }
 
@@ -76,33 +99,36 @@ let message =
 
 `*Sree Angalaeswari Travels*
 
-🚌 New Trip Enquiry
+🚌 New Travel Enquiry
 
-📍 From:
+
+📍 Starting Location:
 ${from}
 
-📍 To:
+
+📍 Destination:
 ${to}
 
 
-🚍 Vehicle Requirement:
-Tourist Bus / Traveller
+🚍 Vehicle:
+${vehicle}
 
 
 Please send availability and quotation.
 
-Thank You.`;
+
+Thank You 🙏`;
 
 
 
 
-let whatsappURL =
 
+let url =
 "https://wa.me/"+phone+"?text="+encodeURIComponent(message);
 
 
 
-window.open(whatsappURL,"_blank");
+window.open(url,"_blank");
 
 
 
@@ -115,18 +141,18 @@ window.open(whatsappURL,"_blank");
 
 
 
-// SIMPLE SCROLL ANIMATION
+
+// SCROLL ANIMATION
 
 
-const cards =
-document.querySelectorAll(
-".service-card,.fleet-card,.contact-card"
+const animatedItems = document.querySelectorAll(
+".card,.fleet-card,.review-card,.contact-card"
 );
 
 
 
-const observer =
-new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver(
+(entries)=>{
 
 
 entries.forEach(entry=>{
@@ -135,9 +161,7 @@ entries.forEach(entry=>{
 if(entry.isIntersecting){
 
 
-entry.target.style.opacity="1";
-
-entry.target.style.transform="translateY(0)";
+entry.target.classList.add("active");
 
 
 }
@@ -146,43 +170,48 @@ entry.target.style.transform="translateY(0)";
 });
 
 
+},
+{
+threshold:0.2
+}
+
+);
+
+
+
+
+animatedItems.forEach(item=>{
+
+
+item.classList.add("animate");
+
+
+observer.observe(item);
+
+
 });
 
 
 
 
 
-cards.forEach(card=>{
-
-
-card.style.opacity="0";
-
-card.style.transform="translateY(40px)";
-
-card.style.transition="0.6s";
-
-
-observer.observe(card);
-
-
-
-});
 
 
 
 
+// AUTO YEAR UPDATE
 
 
-// CURRENT YEAR AUTO UPDATE
+const copyright =
+document.getElementById("copyright");
 
 
-let year =
-document.querySelector("footer p");
+
+if(copyright){
 
 
-if(year){
-
-year.innerHTML =
+copyright.innerHTML =
 "© "+new Date().getFullYear()+" Sree Angalaeswari Travels";
+
 
 }
