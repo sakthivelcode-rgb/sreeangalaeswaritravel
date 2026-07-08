@@ -306,51 +306,36 @@ Professional employee transportation.
 
 <!-- BOOKING -->
 
-<!-- BOOKING -->
+<form action="#" method="post">
 
-<section class="booking" id="booking">
+    <!-- Customer Name -->
+    <label for="name">Customer Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-<div class="title">
-<h2>Plan Your Journey</h2>
-</div>
+    <!-- Phone Number -->
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
 
-<div class="booking-form">
+    <!-- Travel Date -->
+    <label for="date">Travel Date</label>
+    <input type="date" id="date" name="date" placeholder="Select travel date" required>
 
-<input id="fromLocation" placeholder="Starting Location">
+    <!-- Travel Time -->
+    <label for="time">Travel Time</label>
+    <input type="time" id="time" name="time" placeholder="Select time" required>
 
-<input id="toLocation" placeholder="Destination">
+    <!-- Pickup Location -->
+    <label for="pickup">Pickup Location</label>
+    <input type="text" id="pickup" name="pickup" placeholder="Enter pickup location" required>
 
-<!-- DATE -->
-<div class="input-group">
-<label>Travel Date</label>
-<input type="date" id="travelDate">
-</div>
+    <!-- Drop Location -->
+    <label for="drop">Drop Location</label>
+    <input type="text" id="drop" name="drop" placeholder="Enter drop location" required>
 
-<!-- TIME -->
-<div class="input-group">
-<label>Travel Time</label>
-<input type="time" id="travelTime">
-</div>
+    <!-- Submit Button -->
+    <button type="submit">Book Now</button>
 
-<!-- DAYS -->
-<input type="number" id="days" placeholder="Number of Days">
-
-<select id="vehicle">
-<option>Select Vehicle</option>
-<option>Tempo Traveller</option>
-<option>Mini Bus</option>
-<option>Luxury Bus</option>
-</select>
-
-<button onclick="sendBooking()">
-<i class="fa-brands fa-whatsapp"></i>
-Send Enquiry
-</button>
-
-</div>
-
-</section>
-
+</form>
 
 <!-- CONTINUED IN PART 2 -->
   <!-- FLEET SECTION -->
