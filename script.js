@@ -16,7 +16,9 @@ let to = document.getElementById("toLocation").value;
 let date = document.getElementById("travelDate").value;
 let time = document.getElementById("travelTime").value;
 
-let message = `New Booking
+let message = `Sree Angalaeswari Travels
+
+New Booking Request
 
 Name: ${name}
 Phone: ${phoneInput}
