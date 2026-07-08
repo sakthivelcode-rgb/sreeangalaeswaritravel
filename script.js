@@ -1,19 +1,65 @@
 // Mobile Menu
+
 const menuBtn = document.getElementById("menuBtn");
 const menu = document.getElementById("menu");
 
-menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("show");
+
+if(menuBtn){
+
+menuBtn.addEventListener("click",()=>{
+
+menu.classList.toggle("show");
+
 });
 
-// Book Now Alert
-function bookNow() {
-    alert("Thank you for choosing Explore Travels!\nOur team will contact you soon.");
 }
 
-// Reserve Seat - Call
-function callNow() {
-    if (confirm("Do you want to call and reserve your seat?")) {
-        window.location.href = "tel:+919876543210"; // Replace with your number
-    }
+
+
+// Distance Calculation
+
+function calculateDistance(){
+
+
+let from = document.getElementById("fromLocation").value;
+
+let to = document.getElementById("toLocation").value;
+
+
+
+if(from=="" || to==""){
+
+alert("Please enter From and To location");
+
+return;
+
+}
+
+
+
+let distance = "To be calculated by Google Maps";
+
+
+
+let message = 
+`*Sree Angalaeswari Travels Booking*
+
+📍 From : ${from}
+
+📍 To : ${to}
+
+🛣 Distance : ${distance}
+
+Please send quotation.`;
+
+
+let whatsappURL =
+"https://wa.me/919092577913?text="
++encodeURIComponent(message);
+
+
+
+window.open(whatsappURL,"_blank");
+
+
 }
