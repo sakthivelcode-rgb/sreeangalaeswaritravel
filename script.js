@@ -2,8 +2,6 @@
 // WHATSAPP BOOKING
 // ===========================
 
-import { Analytics } from "@vercel/analytics/next"
-
 function sendBooking(){
 
     let name = document.getElementById("customerName").value;
