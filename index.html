@@ -306,71 +306,33 @@ Professional employee transportation.
 
 
 
-
-
-
-
-<!-- BOOKING -->
-
-
-<section class="booking" id="booking">
-
-
-<div class="title">
-
-<h2>
-Plan Your Journey
-</h2>
-
-</div>
+<!--BOOKING--->
 
 
 
 <div class="booking-form">
 
+    <input type="text" id="customerName" placeholder="Your Name">
 
-<input id="fromLocation" placeholder="Starting Location">
+    <input type="tel" id="customerPhone" placeholder="Phone Number">
 
+    <input type="text" id="fromLocation" placeholder="Starting Location">
 
-<input id="toLocation" placeholder="Destination">
+    <input type="text" id="toLocation" placeholder="Destination">
 
+    <select id="vehicle">
+        <option>Select Vehicle</option>
+        <option>Tempo Traveller</option>
+        <option>Mini Bus</option>
+        <option>Luxury Bus</option>
+    </select>
 
-<select id="vehicle">
-
-<option>
-Select Vehicle
-</option>
-
-<option>
-Tempo Traveller
-</option>
-
-<option>
-Mini Bus
-</option>
-
-<option>
-Luxury Bus
-</option>
-
-</select>
-
-
-
-<button onclick="sendBooking()">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-Send Enquiry
-
-</button>
-
+    <button onclick="sendBooking()">
+        <i class="fa-brands fa-whatsapp"></i>
+        Send Enquiry
+    </button>
 
 </div>
-
-
-</section>
-
 
 
 <!-- CONTINUED IN PART 2 -->
