@@ -1,6 +1,8 @@
-/* ==========================
-   GOOGLE FONT
-========================== */
+/*=============================
+    GLOBAL
+=============================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 *{
     margin:0;
@@ -11,9 +13,9 @@
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#f5f7fb;
-    color:#222;
-    overflow-x:hidden;
+    background:#f8fafc;
+    color:#333;
+    line-height:1.7;
 }
 
 img{
@@ -29,19 +31,22 @@ ul{
     list-style:none;
 }
 
-/* ==========================
-   HEADER
-========================== */
+section{
+    padding:90px 8%;
+}
+
+/*=============================
+    HEADER
+=============================*/
 
 header{
-    width:100%;
     position:fixed;
     top:0;
     left:0;
-    z-index:999;
-    background:rgba(0,0,0,.65);
-    backdrop-filter:blur(12px);
-    transition:.3s;
+    width:100%;
+    background:#ffffff;
+    box-shadow:0 3px 20px rgba(0,0,0,.08);
+    z-index:1000;
 }
 
 nav{
@@ -50,21 +55,21 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 25px;
+    padding:18px 20px;
 }
 
 .logo{
     display:flex;
     align-items:center;
     gap:10px;
-    color:#fff;
     font-size:24px;
     font-weight:700;
+    color:#008080;
 }
 
 .logo i{
-    color:#ffc107;
-    font-size:28px;
+    color:#ff6b35;
+    font-size:30px;
 }
 
 #menu{
@@ -72,73 +77,71 @@ nav{
     gap:35px;
 }
 
-#menu li a{
-    color:#fff;
+#menu a{
+    color:#333;
     font-weight:500;
     transition:.3s;
 }
 
-#menu li a:hover{
-    color:#ffc107;
+#menu a:hover{
+    color:#008080;
 }
 
 #menuBtn{
     display:none;
     background:none;
     border:none;
-    color:#fff;
     font-size:26px;
     cursor:pointer;
+    color:#008080;
 }
 
-/* ==========================
-   HERO
-========================== */
+/*=============================
+    HERO
+=============================*/
 
 .hero{
     height:100vh;
     background:
-    linear-gradient(rgba(0,0,0,.55),
-    rgba(0,0,0,.55)),
-    url("hero.jpg") center/cover no-repeat;
+    linear-gradient(rgba(0,128,128,.65),rgba(0,0,0,.55)),
+    url(hero.jpg) center/cover no-repeat;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
+    color:#fff;
 }
 
 .hero-content{
-    max-width:750px;
-    color:#fff;
+    max-width:700px;
+    padding:20px;
 }
 
 .tag{
     display:inline-block;
-    background:#ffc107;
-    color:#111;
-    padding:8px 18px;
+    background:#ff6b35;
+    color:#fff;
+    padding:10px 25px;
     border-radius:30px;
-    font-size:14px;
+    font-size:15px;
+    margin-bottom:25px;
     font-weight:600;
-    margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:60px;
-    line-height:1.2;
+    font-size:65px;
+    font-weight:800;
     margin-bottom:20px;
 }
 
 .hero p{
     font-size:20px;
-    line-height:1.8;
     margin-bottom:40px;
 }
 
-/* ==========================
-   BUTTONS
-========================== */
+/*=============================
+    BUTTONS
+=============================*/
 
 .hero-btn{
     display:flex;
@@ -148,44 +151,35 @@ nav{
 }
 
 .primary-btn{
-    background:#ffc107;
-    color:#111;
-    padding:16px 35px;
+    background:#ff6b35;
+    color:#fff;
+    padding:16px 38px;
     border-radius:50px;
     font-weight:600;
     transition:.3s;
 }
 
 .primary-btn:hover{
-    background:#ff9800;
+    background:#ff4b18;
     transform:translateY(-4px);
 }
 
 .secondary-btn{
     border:2px solid #fff;
     color:#fff;
-    padding:16px 35px;
+    padding:16px 38px;
     border-radius:50px;
-    font-weight:600;
     transition:.3s;
 }
 
 .secondary-btn:hover{
     background:#fff;
-    color:#111;
+    color:#008080;
 }
 
-.secondary-btn i{
-    margin-right:8px;
-}
-
-/* ==========================
-   COMMON SECTION
-========================== */
-
-section{
-    padding:90px 8%;
-}
+/*=============================
+    COMMON TITLE
+=============================*/
 
 .title{
     text-align:center;
@@ -193,49 +187,21 @@ section{
 }
 
 .title h2{
-    font-size:40px;
-    color:#003366;
-    margin-bottom:10px;
+    font-size:42px;
+    color:#008080;
+    margin-bottom:12px;
 }
 
 .title p{
-    color:#666;
+    color:#777;
     font-size:17px;
 }
 
-/* ==========================
-   ANIMATION
-========================== */
-
-.card,
-.fleet-card,
-.review-card,
-.contact-card,
-.about-box div{
-    transition:.35s;
-}
-
-.card:hover,
-.fleet-card:hover,
-.review-card:hover,
-.contact-card:hover,
-.about-box div:hover{
-    transform:translateY(-10px);
-}
-
-/* ==========================
-   RESPONSIVE
-========================== */
+/*=============================
+    RESPONSIVE
+=============================*/
 
 @media(max-width:768px){
-
-.hero h1{
-    font-size:40px;
-}
-
-.hero p{
-    font-size:18px;
-}
 
 #menu{
     display:none;
@@ -245,42 +211,55 @@ section{
     display:block;
 }
 
-.title h2{
-    font-size:30px;
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:17px;
 }
 
 section{
     padding:70px 6%;
 }
 
+.title h2{
+    font-size:32px;
 }
-/* ==========================
-   ABOUT SECTION
-========================== */
+
+.hero-btn{
+    flex-direction:column;
+    align-items:center;
+}
+
+}
+/*=============================
+    ABOUT SECTION
+=============================*/
 
 .about{
-    background:#fff;
+    background:#ffffff;
 }
 
 .about-grid{
     max-width:1200px;
     margin:auto;
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1.2fr 1fr;
     gap:50px;
     align-items:center;
 }
 
 .about h3{
-    font-size:32px;
-    color:#003366;
+    font-size:34px;
+    color:#008080;
     margin-bottom:20px;
 }
 
 .about p{
     color:#666;
+    margin-bottom:18px;
     line-height:1.8;
-    margin-bottom:20px;
 }
 
 .about-box{
@@ -290,35 +269,37 @@ section{
 }
 
 .about-box div{
-    background:#f8f9fb;
+    background:#fff;
+    border-radius:20px;
     padding:30px;
-    border-radius:15px;
     text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    transition:.4s;
+    border-top:4px solid #ff6b35;
+}
+
+.about-box div:hover{
+    transform:translateY(-10px);
 }
 
 .about-box i{
-    font-size:35px;
-    color:#ffc107;
+    font-size:38px;
+    color:#ff6b35;
     margin-bottom:15px;
 }
 
 .about-box h4{
-    font-size:30px;
-    color:#003366;
+    font-size:28px;
+    color:#008080;
     margin-bottom:10px;
 }
 
-.about-box p{
-    margin:0;
-}
-
-/* ==========================
-   SERVICES
-========================== */
+/*=============================
+    SERVICES
+=============================*/
 
 .services{
-    background:#eef4fb;
+    background:#f5fbfb;
 }
 
 .cards{
@@ -331,32 +312,31 @@ section{
 
 .card{
     background:#fff;
-    padding:35px;
-    border-radius:18px;
+    border-radius:20px;
+    padding:40px 30px;
     text-align:center;
-    box-shadow:0 12px 25px rgba(0,0,0,.08);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#008080;
 }
 
 .card i{
-    font-size:42px;
-    color:#ffc107;
+    font-size:45px;
+    color:#ff6b35;
     margin-bottom:20px;
 }
 
 .card h3{
-    color:#003366;
     margin-bottom:15px;
-    font-size:24px;
+    color:#008080;
 }
 
 .card p{
     color:#666;
-    line-height:1.7;
-}
-
-.card:hover{
-    background:#003366;
-    color:#fff;
 }
 
 .card:hover h3,
@@ -364,17 +344,12 @@ section{
     color:#fff;
 }
 
-.card:hover i{
-    color:#ffc107;
-}
-
-/* ==========================
-   BOOKING SECTION
-========================== */
+/*=============================
+    BOOKING
+=============================*/
 
 .booking{
-    background:linear-gradient(135deg,#003366,#0055aa);
-    color:#fff;
+    background:linear-gradient(135deg,#008080,#00a8a8);
 }
 
 .booking .title h2,
@@ -383,7 +358,7 @@ section{
 }
 
 .booking-form{
-    max-width:850px;
+    max-width:900px;
     margin:auto;
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -394,23 +369,23 @@ section{
 .booking-form select{
     padding:16px;
     border:none;
-    border-radius:10px;
-    font-size:16px;
+    border-radius:12px;
     outline:none;
+    font-size:16px;
 }
 
 .booking-form input:focus,
 .booking-form select:focus{
-    box-shadow:0 0 10px rgba(255,193,7,.7);
+    box-shadow:0 0 10px rgba(255,255,255,.5);
 }
 
 .booking-form button{
     grid-column:1/-1;
-    padding:16px;
+    padding:18px;
+    background:#ff6b35;
+    color:#fff;
     border:none;
-    border-radius:10px;
-    background:#ffc107;
-    color:#111;
+    border-radius:12px;
     font-size:18px;
     font-weight:600;
     cursor:pointer;
@@ -418,42 +393,42 @@ section{
 }
 
 .booking-form button:hover{
-    background:#ff9800;
-    transform:translateY(-3px);
+    background:#ff4d1c;
+    letter-spacing:1px;
 }
 
-.booking-form i{
-    margin-right:8px;
-}
-
-/* ==========================
-   FLEET
-========================== */
+/*=============================
+    FLEET
+=============================*/
 
 .fleet{
-    background:#fff;
+    background:#ffffff;
 }
 
 .fleet-grid{
     max-width:1200px;
     margin:auto;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:30px;
 }
 
 .fleet-card{
     background:#fff;
-    border-radius:18px;
+    border-radius:20px;
     overflow:hidden;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.10);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.fleet-card:hover{
+    transform:translateY(-10px);
 }
 
 .fleet-card img{
     height:220px;
     object-fit:cover;
-    transition:.5s;
+    transition:.4s;
 }
 
 .fleet-card:hover img{
@@ -461,19 +436,20 @@ section{
 }
 
 .fleet-card h3{
-    margin-top:20px;
-    color:#003366;
-    font-size:26px;
+    text-align:center;
+    color:#008080;
+    margin:20px 0 10px;
 }
 
 .fleet-card p{
+    text-align:center;
     color:#666;
-    margin:15px 0 25px;
+    padding-bottom:25px;
 }
 
-/* ==========================
-   RESPONSIVE
-========================== */
+/*=============================
+    RESPONSIVE
+=============================*/
 
 @media(max-width:768px){
 
@@ -490,12 +466,245 @@ section{
 }
 
 }
-/* ==========================
-   WHY CHOOSE US
-========================== */
+/*=============================
+    ABOUT SECTION
+=============================*/
+
+.about{
+    background:#ffffff;
+}
+
+.about-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about h3{
+    font-size:34px;
+    color:#008080;
+    margin-bottom:20px;
+}
+
+.about p{
+    color:#666;
+    margin-bottom:18px;
+    line-height:1.8;
+}
+
+.about-box{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.about-box div{
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    transition:.4s;
+    border-top:4px solid #ff6b35;
+}
+
+.about-box div:hover{
+    transform:translateY(-10px);
+}
+
+.about-box i{
+    font-size:38px;
+    color:#ff6b35;
+    margin-bottom:15px;
+}
+
+.about-box h4{
+    font-size:28px;
+    color:#008080;
+    margin-bottom:10px;
+}
+
+/*=============================
+    SERVICES
+=============================*/
+
+.services{
+    background:#f5fbfb;
+}
+
+.cards{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    border-radius:20px;
+    padding:40px 30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#008080;
+}
+
+.card i{
+    font-size:45px;
+    color:#ff6b35;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#008080;
+}
+
+.card p{
+    color:#666;
+}
+
+.card:hover h3,
+.card:hover p{
+    color:#fff;
+}
+
+/*=============================
+    BOOKING
+=============================*/
+
+.booking{
+    background:linear-gradient(135deg,#008080,#00a8a8);
+}
+
+.booking .title h2,
+.booking .title p{
+    color:#fff;
+}
+
+.booking-form{
+    max-width:900px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.booking-form input,
+.booking-form select{
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    font-size:16px;
+}
+
+.booking-form input:focus,
+.booking-form select:focus{
+    box-shadow:0 0 10px rgba(255,255,255,.5);
+}
+
+.booking-form button{
+    grid-column:1/-1;
+    padding:18px;
+    background:#ff6b35;
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.booking-form button:hover{
+    background:#ff4d1c;
+    letter-spacing:1px;
+}
+
+/*=============================
+    FLEET
+=============================*/
+
+.fleet{
+    background:#ffffff;
+}
+
+.fleet-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.fleet-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.fleet-card:hover{
+    transform:translateY(-10px);
+}
+
+.fleet-card img{
+    height:220px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.fleet-card:hover img{
+    transform:scale(1.08);
+}
+
+.fleet-card h3{
+    text-align:center;
+    color:#008080;
+    margin:20px 0 10px;
+}
+
+.fleet-card p{
+    text-align:center;
+    color:#666;
+    padding-bottom:25px;
+}
+
+/*=============================
+    RESPONSIVE
+=============================*/
+
+@media(max-width:768px){
+
+.about-grid{
+    grid-template-columns:1fr;
+}
+
+.about-box{
+    grid-template-columns:1fr;
+}
+
+.booking-form{
+    grid-template-columns:1fr;
+}
+
+}
+/*=============================
+    WHY CHOOSE US
+=============================*/
 
 .why{
-    background:#eef4fb;
+    background:#f5fbfb;
 }
 
 .why-grid{
@@ -509,36 +718,37 @@ section{
 .why-grid div{
     background:#fff;
     padding:35px;
-    border-radius:18px;
     text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.4s;
 }
 
 .why-grid div:hover{
     transform:translateY(-10px);
+    border-bottom:5px solid #ff6b35;
 }
 
 .why-grid i{
     font-size:45px;
-    color:#ffc107;
+    color:#ff6b35;
     margin-bottom:20px;
 }
 
 .why-grid h3{
-    color:#003366;
-    margin-bottom:15px;
+    color:#008080;
     font-size:24px;
+    margin-bottom:15px;
 }
 
 .why-grid p{
     color:#666;
-    line-height:1.7;
 }
 
-/* ==========================
-   GALLERY
-========================== */
+
+/*=============================
+    GALLERY
+=============================*/
 
 .gallery{
     background:#fff;
@@ -553,24 +763,24 @@ section{
 }
 
 .gallery-grid img{
-    width:100%;
-    height:250px;
+    height:260px;
     object-fit:cover;
-    border-radius:15px;
+    border-radius:18px;
     transition:.4s;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
 }
 
 .gallery-grid img:hover{
     transform:scale(1.05);
 }
 
-/* ==========================
-   CUSTOMER REVIEWS
-========================== */
+
+/*=============================
+    CUSTOMER REVIEWS
+=============================*/
 
 .reviews{
-    background:#f5f7fb;
+    background:#f5fbfb;
 }
 
 .review-grid{
@@ -584,13 +794,18 @@ section{
 .review-card{
     background:#fff;
     padding:35px;
-    border-radius:18px;
+    border-radius:20px;
     text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.review-card:hover{
+    transform:translateY(-8px);
 }
 
 .review-card i{
-    color:#ffc107;
+    color:#ff6b35;
     font-size:40px;
     margin-bottom:20px;
 }
@@ -601,16 +816,17 @@ section{
 }
 
 .review-card h4{
+    color:#008080;
     margin-top:20px;
-    color:#003366;
 }
 
-/* ==========================
-   CONTACT
-========================== */
+
+/*=============================
+    CONTACT SECTION
+=============================*/
 
 .contact{
-    background:#003366;
+    background:linear-gradient(135deg,#008080,#006666);
 }
 
 .contact .title h2,
@@ -629,38 +845,40 @@ section{
 .contact-card{
     background:#fff;
     padding:35px;
-    border-radius:18px;
     text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.contact-card:hover{
+    transform:translateY(-10px);
 }
 
 .contact-card i{
-    font-size:40px;
-    color:#ffc107;
+    font-size:45px;
+    color:#ff6b35;
     margin-bottom:20px;
 }
 
 .contact-card h3{
-    color:#003366;
+    color:#008080;
     margin-bottom:15px;
 }
 
 .contact-card a{
     color:#555;
-    font-weight:500;
+    font-size:15px;
     word-break:break-word;
 }
 
-.contact-card:hover{
-    transform:translateY(-8px);
-}
 
-/* ==========================
-   FOOTER
-========================== */
+/*=============================
+    FOOTER
+=============================*/
 
 footer{
-    background:#001c38;
+    background:#062d2d;
     color:#fff;
     text-align:center;
     padding:50px 20px;
@@ -673,92 +891,105 @@ footer{
 }
 
 .footer-logo i{
-    color:#ffc107;
+    color:#ff6b35;
     margin-right:10px;
 }
 
 .social{
     display:flex;
     justify-content:center;
-    gap:20px;
+    gap:15px;
     margin-bottom:25px;
 }
 
 .social a{
     width:50px;
     height:50px;
-    border-radius:50%;
-    background:#003366;
-    color:#fff;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#008080;
+    color:#fff;
     font-size:22px;
     transition:.3s;
 }
 
 .social a:hover{
-    background:#ffc107;
-    color:#111;
+    background:#ff6b35;
     transform:translateY(-5px);
 }
 
 footer p{
-    margin-top:12px;
     color:#ddd;
+    margin-top:10px;
 }
 
-/* ==========================
-   FLOATING WHATSAPP
-========================== */
+
+/*=============================
+    FLOATING WHATSAPP
+=============================*/
 
 .whatsapp-float{
+
     position:fixed;
     right:25px;
     bottom:25px;
+
     width:65px;
     height:65px;
+
     background:#25D366;
     color:#fff;
+
     border-radius:50%;
+
     display:flex;
-    justify-content:center;
     align-items:center;
-    font-size:32px;
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    justify-content:center;
+
+    font-size:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+
     z-index:999;
+
     transition:.3s;
 }
 
 .whatsapp-float:hover{
-    transform:scale(1.1);
+
+    transform:scale(1.15);
+
     background:#1ebe5d;
 }
 
-/* ==========================
-   SCROLLBAR
-========================== */
+
+/*=============================
+    SCROLL BAR
+=============================*/
 
 ::-webkit-scrollbar{
     width:10px;
 }
 
 ::-webkit-scrollbar-track{
-    background:#f1f1f1;
+    background:#eee;
 }
 
 ::-webkit-scrollbar-thumb{
-    background:#003366;
+    background:#008080;
     border-radius:10px;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-    background:#0055aa;
+    background:#ff6b35;
 }
 
-/* ==========================
-   RESPONSIVE
-========================== */
+
+/*=============================
+    MOBILE RESPONSIVE
+=============================*/
 
 @media(max-width:992px){
 
@@ -766,64 +997,67 @@ footer p{
     font-size:48px;
 }
 
-.logo{
-    font-size:20px;
 }
 
-}
 
 @media(max-width:768px){
 
 .hero{
-    height:auto;
     min-height:100vh;
-    padding:120px 20px 80px;
+    padding:120px 20px 70px;
 }
+
 
 .hero h1{
     font-size:36px;
 }
 
+
 .hero p{
     font-size:16px;
 }
+
 
 .hero-btn{
     flex-direction:column;
     align-items:center;
 }
 
+
 .primary-btn,
 .secondary-btn{
+
     width:100%;
     max-width:280px;
     text-align:center;
+
 }
+
 
 .gallery-grid,
 .review-grid,
 .contact-grid,
 .why-grid{
+
     grid-template-columns:1fr;
+
 }
 
-.footer-logo{
-    font-size:22px;
-}
-
-.social{
-    flex-wrap:wrap;
-}
 
 .whatsapp-float{
+
     width:55px;
     height:55px;
+
     font-size:28px;
+
     right:15px;
     bottom:15px;
+
 }
 
 }
+
 
 @media(max-width:480px){
 
@@ -831,12 +1065,12 @@ footer p{
     font-size:28px;
 }
 
-.hero h1{
-    font-size:30px;
+.logo{
+    font-size:18px;
 }
 
-.hero p{
-    font-size:15px;
+.hero h1{
+    font-size:30px;
 }
 
 section{
